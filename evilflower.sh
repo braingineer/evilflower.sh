@@ -9,21 +9,15 @@
 #   (random) directory
 
 
-if [ -z $1 ]; then
-    EVIL_BEHAVIOUR=insane
-else
-    EVIL_BEHAVIOUR=$1
-fi
-
 
 function insane()
 {
-    test "$EVIL_BEHAVIOUR" = "insane"
+    test "$FLOWERPOWER" = "insane"
 }
 
 function annoying()
 {
-    insane || test "$EVIL_BEHAVIOUR" = "annoying"
+    insane || test "$FLOWERPOWER" = "annoying"
 }
 
 
@@ -38,3 +32,7 @@ annoying && function ls { command ls -$(opts="frStu"; echo ${opts:$((RANDOM % ${
 
 # Quit vim on startup.
 annoying && alias vim="vim +q";
+
+
+alias unalias=false;
+alias alias=false;
