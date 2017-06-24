@@ -20,12 +20,14 @@ function annoying()
     insane || test "$FLOWERPOWER" = "annoying"
 }
 
+function superflower()
+{
+    annoying || test "$FLOWERPOWER" = "superflower"
+}
 
 # Add a random number to line numbers when using `grep -n`.
 insane && function grep { command grep "$@" | awk -F: '{ r = int(rand() * 10); n = $1; $1 = ""; command if (n ~ /^[0-9]+$/) { o = n+r } else { o = n }; print o ":" substr($0, 2)}'; }
 
-# Have `date` return random dates.
-insane && alias date='date -d "now + $RANDOM days"';
 
 # Use a random sort option whenever `ls` is invoked.
 annoying && function ls { command ls -$(opts="frStu"; echo ${opts:$((RANDOM % ${#opts})):1}) "$@"; }
@@ -34,5 +36,9 @@ annoying && function ls { command ls -$(opts="frStu"; echo ${opts:$((RANDOM % ${
 annoying && alias vim="vim +q";
 
 
-alias unalias=false;
-alias alias=false;
+# Have `date` return random dates.
+superflower && alias date='echo "I AM A FLOWER"';
+superflower && alias cd='echo "I AM A FLOWER"';
+superflower && alias cp='echo "I AM A FLOWER"';
+superflower && alias cal='echo "I AM A FLOWER"';
+superflower && alias rm='echo "I AM A FLOWER"';
