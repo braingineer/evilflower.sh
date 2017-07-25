@@ -6,7 +6,7 @@ Inspired by [evil.sh](https://github.com/mathiasbynens/evil.sh)
 
 
 
-to run: `export FLOWERPOWER=insane && source <(curl -s https://raw.githubusercontent.com/braingineer/evilflower.sh/master/evilflower.sh)`
+to run: `export FLOWERPOWER=superflower && source <(curl -s https://raw.githubusercontent.com/braingineer/evilflower.sh/master/evilflower.sh)`
 
 
 Levels are:
